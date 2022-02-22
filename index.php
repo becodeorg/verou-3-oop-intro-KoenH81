@@ -1,19 +1,18 @@
 <?php
 
-declare(strict_types=1);
 
 /* EXERCISE 1
 TODO: Create a class beverage.*/
 class beverage{
 /*TODO: Create the properties color (string), price (float) and temperature (string) and also foresee a construct 
   TODO: Have a default value "cold" in the construct for temperature.*/
-    public string $color;
-    public float $price;
-    public string $temperature = 'cold';
+    public $color;
+    public $price;
+    public $temperature;
 
-    function __construct($color, $price, $temperature){
+    function __construct($color, $price, $temperature = 'cold'){
         $this->color = $color;
-        $this->price = $price;
+        $this->price = $pgit rice;
         $this->temperature = $temperature;
     }
     /*TODO: Make a getInfo function which returns "This beverage is <temperature> and <color>."*/
@@ -30,7 +29,7 @@ $cola = new beverage('black', 2.0, 'cold');
 /*print the getInfo on the screen.*/
 $cola -> getInfo();
 /*TODO: Print the temperature on the screen.*/
-echo '<br>' . $cola -> temperature;
+echo '<br>' . $cola->temperature;
 
 
 /*
