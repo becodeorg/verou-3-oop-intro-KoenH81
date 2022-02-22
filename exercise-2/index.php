@@ -10,16 +10,14 @@ class Beer extends Beverage{
     public string $name;
     public float $alcoholpercentage;
 /*TODO: Foresee a construct that's allows us to use all the properties from beverage and that sets the values for name and alcoholpercentage. */
-    public function __construct(string $name, string $color, float $price, string $temperature, float $alcoholpercentage){
+    public function __construct(string $name, string $color, float $price, string $temperature, float $alcoholpercentage){ 
         $this->name = $name;
-        // $this->color = $color;
-        // $this->price = $price;
-        // $this->temperature = $temperature;
         $this->alcoholpercentage = $alcoholpercentage;
+        parent::__construct($color, $price, $temperature = 'cold');
     }
 /*TODO: Make a getAlcoholpercentage function which returns the alocoholpercentage.*/
     public function getAlcoholpecentage(){
-        return $alcoholpercentage;
+        return $this->alcoholpercentage;
     }
 }
 /*TODO: Instantiate an object which represents Duvel. Make sure that the color is set to blond, the price equals 3.5 euro and the temperature to cold automatically.
